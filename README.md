@@ -2,8 +2,7 @@
 
 This project implements a Q-Learning agent that learns to navigate a randomly generated GridWorld environment from the top-left state to the bottom-right goal state.
 
-Three different implementations are included:
-
+Files:
 - qlearning_serial.cpp – Sequential Q-Learning implementation
 - qlearning_shared.cpp – OpenMP implementation using a shared Q-table protected with per-state mutexes
 - qlearning_localsync.cpp – OpenMP implementation using private Q-tables with periodic synchronization
@@ -17,8 +16,6 @@ Before compiling the project, the following software must be installed:
 - g++
 - OpenMP support
 - Standard C++ libraries
-
-The project uses the C++17 standard.
 
 ## Compilation
 
@@ -74,12 +71,12 @@ Example:
 
 ## Parameters
 
-- `rows` – Number of GridWorld rows
-- `cols` – Number of GridWorld columns
-- `episodes` – Total number of training episodes
-- `threads` – Number of OpenMP threads
-- `sync_interval` – Number of episodes per thread between Q-table synchronizations
-- `seed` – Random seed used for reproducible GridWorld generation
+- rows – Number of GridWorld rows
+- cols – Number of GridWorld columns
+- episodes – Total number of training episodes
+- threads – Number of OpenMP threads
+- sync_interval – Number of episodes per thread between Q-table synchronizations
+- seed – Random seed used for reproducible GridWorld generation
 
 If no seed is provided, the default value is 42
 
